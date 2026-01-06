@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+
+<h2>Student Information Form</h2>
+
+<form action="#" method="post">
+
+    <!-- Name -->
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <!-- Email -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Gender -->
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+    <br><br>
+
+    <!-- Favorite Subject -->
+    <label for="subject">Favorite Subject:</label><br>
+    <select id="subject" name="subject">
+        <option value="Web Technology">Web Technology</option>
+        <option value="C Programming">C Programming</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Graphics">Computer Graphics</option>
+    </select>
+    <br><br>
+
+    <!-- Comments -->
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+    <br><br>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>

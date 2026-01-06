@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions and Scope</title>
+</head>
+<body>
+
+<h2>JavaScript Functions and Scope Demo</h2>
+
+<script>
+    // ---------- User-defined Function ----------
+    function greet(name) {
+        return "Hello, " + name + "!";
+    }
+
+    // Invoking the function
+    document.write(greet("Mehul"));
+    document.write("<br><br>");
+
+    // ---------- Function with Parameters ----------
+    function add(a, b) {
+        return a + b;
+    }
+
+    document.write("Addition: " + add(10, 20));
+    document.write("<br><br>");
+
+    // ---------- var Scope (Function Scope) ----------
+    function varScopeDemo() {
+        if (true) {
+            var x = 10;   // function-scoped
+        }
+        document.write("var x = " + x + "<br>");
+    }
+
+    varScopeDemo();
+
+    // ---------- let Scope (Block Scope) ----------
+    function letScopeDemo() {
+        if (true) {
+            let y = 20;   // block-scoped
+            document.write("let y inside block = " + y + "<br>");
+        }
+        // document.write(y); // ❌ Error: y is not accessible here
+    }
+
+    letScopeDemo();
+
+    // ---------- const Scope (Block Scope & Constant) ----------
+    function constScopeDemo() {
+        const z = 30;   // cannot be reassigned
+        document.write("const z = " + z + "<br>");
+        // z = 40; // ❌ Error: Assignment to constant variable
+    }
+
+    constScopeDemo();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Types in One Code</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .internal {
+      color: green;
+      font-size: 18px;
+      border: 2px dashed green;
+      padding: 10px;
+    }
+    .external {
+      color: blue;
+      font-size: 20px;
+      border: 2px solid blue;
+      padding: 10px;
+    }
+  </style>
+
+  <!-- External CSS (simulated in same file for demo) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <h1 style="color:red; text-align:center;">Inline CSS Example</h1>
+
+  <!-- Internal CSS -->
+  <p class="internal">
+    This paragraph uses Internal CSS.
+  </p>
+
+  <!-- External CSS -->
+  <p class="external">
+    This paragraph uses External CSS.
+  </p>
+
+</body>
+</html>

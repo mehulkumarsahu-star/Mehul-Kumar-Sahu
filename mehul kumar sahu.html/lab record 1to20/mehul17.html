@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Events</title>
+</head>
+<body>
+
+<h2>Keyboard Event Demo</h2>
+<p id="output">Press any key...</p>
+
+<button onclick="start()">Start Keyboard Listener</button>
+<button onclick="stop()">Stop Keyboard Listener</button>
+
+<script>
+  const output = document.getElementById("output");
+
+  // event handler function
+  function keyHandler(event) {
+    output.innerHTML = "Key Pressed: " + event.key + 
+                       " | Key Code: " + event.keyCode;
+  }
+
+  // addEventListener
+  function start() {
+    document.addEventListener("keydown", keyHandler);
+    output.innerHTML = "Keyboard listener started. Press any key...";
+  }
+
+  // removeEventListener
+  function stop() {
+    document.removeEventListener("keydown", keyHandler);
+    output.innerHTML = "Keyboard listener stopped.";
+  }
+</script>
+
+</body>
+</html>

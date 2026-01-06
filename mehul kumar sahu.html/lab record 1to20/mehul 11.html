@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Arithmetic Operations</title>
+</head>
+<body>
+
+    <h2>Arithmetic Calculator</h2>
+
+    <label>First Number:</label><br>
+    <input type="number" id="num1"><br><br>
+
+    <label>Second Number:</label><br>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="calculate('+')">Add</button>
+    <button onclick="calculate('-')">Subtract</button>
+    <button onclick="calculate('*')">Multiply</button>
+    <button onclick="calculate('/')">Divide</button>
+
+    <p id="result">Result: </p>
+
+    <script>
+        function calculate(operator) {
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+            var result;
+
+            if (isNaN(n1) || isNaN(n2)) {
+                result = "Please enter valid numbers";
+            } else {
+                if (operator === '+') {
+                    result = n1 + n2;
+                } else if (operator === '-') {
+                    result = n1 - n2;
+                } else if (operator === '*') {
+                    result = n1 * n2;
+                } else if (operator === '/') {
+                    result = (n2 !== 0) ? (n1 / n2) : "Cannot divide by zero";
+                }
+            }
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+
+</body>
+</html>

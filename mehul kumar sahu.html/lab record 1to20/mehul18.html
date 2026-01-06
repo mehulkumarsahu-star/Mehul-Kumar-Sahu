@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Create & Manipulate</title>
+</head>
+<body>
+
+  <h2 id="title">DOM Manipulation Demo</h2>
+  <div id="container"></div>
+
+  <button onclick="addElement()">Add Element</button>
+  <button onclick="changeElement()">Modify Element</button>
+  <button onclick="removeElement()">Remove Element</button>
+
+  <script>
+    let para; // reference variable
+
+    // Create and append element
+    function addElement() {
+      para = document.createElement("p");      // create element
+      para.textContent = "This is a new paragraph";
+      para.style.color = "blue";
+      document.getElementById("container").appendChild(para);
+    }
+
+    // Modify element
+    function changeElement() {
+      if (para) {
+        para.textContent = "Paragraph text modified!";
+        para.style.color = "green";
+      }
+    }
+
+    // Remove element
+    function removeElement() {
+      if (para) {
+        document.getElementById("container").removeChild(para);
+        para = null;
+      }
+    }
+  </script>
+
+</body>
+</html>
